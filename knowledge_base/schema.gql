@@ -26,7 +26,7 @@ bank sub entity,
 account sub entity,
   plays bank-account,
   key account-number,
-  has opening-date,
+  has opening-datetime,
   has balance,
   has account-type,
   plays offer,
@@ -37,8 +37,8 @@ card sub entity,
   plays bank-card,
   key card-number,
   has name-on-card,
-  has expiry-date,
-  has created-date;
+  has expiry-datetime,
+  has created-datetime;
 
 mapping sub entity,
   has mapping-key,
@@ -55,7 +55,7 @@ contract sub relation,
   relates offer,
   relates provider,
   key identifier,
-  has sign-date;
+  has sign-datetime;
 
 transaction sub relation,
   relates account-of-receiver,
@@ -64,7 +64,7 @@ transaction sub relation,
   has amount,
   has reference,
   has category,
-  has execution-date;
+  has execution-datetime;
 
 represented-by sub relation,
   relates bank-account,
@@ -74,94 +74,94 @@ represented-by sub relation,
 # attribute
 
 mapping-key sub attribute,
-  datatype string;
+  value string;
 
 mapping-value sub attribute,
-  datatype string;
+  value string;
 
-execution-date sub attribute,
-  datatype date;
+execution-datetime sub attribute,
+  value datetime;
 
-created-date sub attribute,
-  datatype date;
+created-datetime sub attribute,
+  value datetime;
 
-expiry-date sub attribute,
-  datatype date;
+expiry-datetime sub attribute,
+  value datetime;
 
-sign-date sub attribute,
-  datatype date;
+sign-datetime sub attribute,
+  value datetime;
 
-opening-date sub attribute,
-  datatype date;
+opening-datetime sub attribute,
+  value datetime;
 
 email sub attribute,
-  datatype string;
+  value string;
 
 name sub attribute,
-  datatype string;
+  value string;
 
 first-name sub attribute,
-  datatype string;
+  value string;
 
 last-name sub attribute,
-  datatype string;
+  value string;
 
 city sub attribute,
-  datatype string;
+  value string;
 
 headquarters sub attribute,
-  datatype string;
+  value string;
 
 balance sub attribute,
-  datatype double;
+  value double;
 
 account-number sub attribute,
-  datatype string;
+  value string;
 
 account-type sub attribute,
-  datatype string;
+  value string;
 
 card-number sub attribute,
-  datatype long;
+  value long;
 
 amount sub attribute,
-  datatype double;
+  value double;
 
 reference sub attribute,
-  datatype string;
+  value string;
 
 category sub attribute,
-  datatype string;
+  value string;
 
 phone-number sub attribute,
-  datatype string;
+  value string;
 
 gender sub attribute,
-  datatype string;
+  value string;
 
 country sub attribute,
-  datatype string;
+  value string;
 
 allowed-residents sub attribute,
-  datatype string;
+  value string;
 
 free-accounts sub attribute,
-  datatype boolean;
+  value boolean;
 
 english-customer-service sub attribute,
-  datatype boolean;
+  value boolean;
 
 english-website sub attribute,
-  datatype boolean;
+  value boolean;
 
 english-mobile-app sub attribute,
-  datatype boolean;
+  value boolean;
 
 free-worldwide-withdrawals sub attribute,
-  datatype boolean;
+  value boolean;
 
 identifier sub attribute,
-  datatype long;
+  value long;
 
 name-on-card sub attribute,
-  datatype string;
+  value string;
