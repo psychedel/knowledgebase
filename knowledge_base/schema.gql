@@ -26,7 +26,7 @@ bank sub entity,
 account sub entity,
   plays bank-account,
   key account-number,
-  has opening-datetime,
+  has opening-date,
   has balance,
   has account-type,
   plays offer,
@@ -37,8 +37,8 @@ card sub entity,
   plays bank-card,
   key card-number,
   has name-on-card,
-  has expiry-datetime,
-  has created-datetime;
+  has expiry-date,
+  has created-date;
 
 mapping sub entity,
   has mapping-key,
@@ -55,7 +55,7 @@ contract sub relation,
   relates offer,
   relates provider,
   key identifier,
-  has sign-datetime;
+  has sign-date;
 
 transaction sub relation,
   relates account-of-receiver,
@@ -64,7 +64,7 @@ transaction sub relation,
   has amount,
   has reference,
   has category,
-  has execution-datetime;
+  has execution-date;
 
 represented-by sub relation,
   relates bank-account,
@@ -79,19 +79,19 @@ mapping-key sub attribute,
 mapping-value sub attribute,
   value string;
 
-execution-datetime sub attribute,
+execution-date sub attribute,
   value datetime;
 
-created-datetime sub attribute,
+created-date sub attribute,
   value datetime;
 
-expiry-datetime sub attribute,
+expiry-date sub attribute,
   value datetime;
 
-sign-datetime sub attribute,
+sign-date sub attribute,
   value datetime;
 
-opening-datetime sub attribute,
+opening-date sub attribute,
   value datetime;
 
 email sub attribute,
